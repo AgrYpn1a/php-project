@@ -1,17 +1,17 @@
 <?php 
 
 	class User {
-		public $username;
-		public $name;
-		public $lastname;
-		public $email;
-		public $password;
+		private $username;
+		private $name;
+		private $lastname;
+		private $email;
+		private $password;
 
 		// Array of all projects
-		public $projects = Array();
+		private $projects = Array();
 
 		// String url
-		public $profilePicture = "";
+		private $profilePicture = "";
 
 		function constructor($username, $email, $password) {
 			$this->username = $username;

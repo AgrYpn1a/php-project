@@ -1,11 +1,13 @@
-
 <?php 
 	$activePage = 'home';
 	$style_sheet = 'styles/main.css';
- ?>
+
+ 	// TODO
+ 	// If logged in, should redirect to home.php
+  // header('Location: '.'home.php');
+?>
 
 <?php include("templates/header.php") ?>
-
 
 <div class="container" style="margin-top: 20%;">
 	<h3 align="center">Welcome to</h3>

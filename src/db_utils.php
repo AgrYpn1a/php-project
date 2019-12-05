@@ -11,7 +11,7 @@
 
 			if(!$init) {
 				$init = true;
-				$dsn = "mysql:host=46.101.170.205;dbname=php_web_test";
+				$dsn = "mysql:host=46.101.170.205;dbname=project_manager";
 				$user = "root";
 				$passwd = "r.rv`w)B/](+h\"5P";
 
@@ -32,7 +32,7 @@
 			} catch (PDOException $e) {
 			 	echo 'Query failed.';
 			  return false; 
-			}
+			} finally { $pdo = NULL; }
 		}
 
 		public static function login($username, $password) {
@@ -50,8 +50,7 @@
 			} catch (PDOException $e) { 
 				echo 'Query failed'; 
 				return false; 
-			}
-
+			} finally { $pdo = NULL; }
 		}
 	}
 
