@@ -7,7 +7,7 @@
     	header('Location: '.'../index.php');
 
     if(isset($_POST['addProject'])) {
-    	header('Location: '.'addProject.php');
+    	header('Location: '.'add_project.php');
     }
  ?>
 
