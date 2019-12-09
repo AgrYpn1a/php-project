@@ -1,5 +1,9 @@
 <?php 
 	$activePage = 'profile';
+
+	session_start();
+	if(!isset($_SESSION['name']))
+    	header('Location: '.'../index.php');
  ?>
 
 <?php include("../templates/header.php") ?>

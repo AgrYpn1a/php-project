@@ -9,7 +9,10 @@
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    if(DButils::login($username, $password)) {
+    session_start();
+    $_SESSION['name'] = $username;
+
+    if(DBUtils::login($username, $password)) {
       echo "Login successful. Welcome, {$username}";
       header('Location: '.'home.php');
       exit();
