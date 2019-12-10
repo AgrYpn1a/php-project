@@ -2,13 +2,9 @@
   $style_sheet = '../styles/main.css';
 	$activePage = 'home';
 
-	session_start();
-	if(!isset($_SESSION['name']))
-    	header('Location: '.'../index.php');
-
-    if(isset($_POST['addProject'])) {
-    	header('Location: '.'add_project.php');
-    }
+	// TODO 
+	// Do not show this page if not logged in
+	
  ?>
 
 <?php include("../templates/header.php") ?>

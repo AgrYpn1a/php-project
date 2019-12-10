@@ -1,22 +1,8 @@
 <?php
   $style_sheet = '../styles/main.css';
 
-  include('../src/db_utils.php');
-
-  DBUtils::init();
-
-  if(isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    if(DBUtils::register_user($username, $email, $password)) {
-      echo "Got it! User signed up with {$username}";
-      header('Location: '.'login.php');
-    } else {
-      echo "Error registering user.";
-    }
-  }
+  // TODO Vladimir
+  // Handle registration
 ?>
 
 <?php include("../templates/header.php"); ?>

@@ -5,22 +5,8 @@
 	$activePage = 'home';
 	$style_sheet = 'styles/main.css';
 
-	$name = null;
-
-	if(isset($_SESSION['name'])){
-  		$name = $_SESSION['name'];
-	}
-
-  	if($name) {
-    	header('Location: '.'pages/home.php');
-  	}
-
-	// if(isset($_SESSION['name']))
- //    	header('Location: '.'pages/home.php');
-
- 	// TODO
- 	// If logged in, should redirect to home.php
-  // header('Location: '.'home.php');
+	// TODO Miljan
+	// Do not show this if not logged in
 ?>
 
 <div class="container" style="margin-top: 20%;">

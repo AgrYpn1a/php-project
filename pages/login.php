@@ -1,26 +1,7 @@
 <?php 
-  include('../src/db_utils.php');
 
-  $style_sheet = '../styles/main.css';
-
-  DBUtils::init();
-
-  if(isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    session_start();
-    $_SESSION['name'] = $username;
-
-    if(DBUtils::login($username, $password)) {
-      echo "Login successful. Welcome, {$username}";
-      header('Location: '.'home.php');
-      exit();
-    } else {
-      echo "Login error.";
-    }
-  }
-
+  // TODO Miljan
+  // handle login
 ?>
 
 <?php include("../templates/header.php"); ?>

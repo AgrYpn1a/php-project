@@ -1,16 +1,9 @@
 <?php 
 $activePage = 'projects';
 
-session_start();
-if(!isset($_SESSION['name']))
-	header('Location: '.'../index.php');
+	// TODO 
+	// Do not show this page if not logged in
 
-include('../src/project.php');
-include('../src/db_utils.php');
-
-DBUtils::init();
-
-$projects = DBUtils::fetch_projects($_SESSION['name']);
 ?>
 
 <?php include("../templates/header.php") ?>
@@ -20,35 +13,7 @@ $projects = DBUtils::fetch_projects($_SESSION['name']);
 
 	<div class="row justify-content-between" style="text-align:justify; margin-top: 25px;">
 
-		<?php foreach($projects as $project): ?>		
-			<div class="col-md" style="padding: 2%;">
-				<div class="card" >
-					<div class="card-body">
-						<h5 class="card-title">
-							<a href="#" class="badge badge-light">
-								<h3><?php echo $project['name']; ?></h3>
-							</a>
-							<p class="card-text">
-								<?php echo $project['description']; ?>
-							</p>
-							<hr>
-							<p>
-								<div>Tags</div>
-								<div>tag1, tag2, tag3</div>
-							</p>
-							<div style="margin-bottom: 10px;">
-								<a href="#" class="btn btn-primary">Edit</a>
-							</div>
-							<div>
-								<a href="#" class="btn btn-outline-secondary">Add tags</a>
-								<a href="#" class="btn btn-outline-danger">Add bugs</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			<?php endforeach; ?>		
-
-<!-- 		<div class="col-md" style="padding: 2%;">
+		<div class="col-md" style="padding: 2%;">
 			<div class="card" >
 				<div class="card-body">
 					<h5 class="card-title">Project title</h5>
@@ -96,7 +61,7 @@ $projects = DBUtils::fetch_projects($_SESSION['name']);
 				</div>
 			</div>
 		</div>
-	-->
+	</div>
 </div>
-</div>
+
 <?php include("../templates/footer.php") ?>
