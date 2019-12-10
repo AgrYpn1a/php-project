@@ -1,9 +1,8 @@
 <?php 
 	$activePage = 'profile';
 
-	session_start();
-	if(!isset($_SESSION['name']))
-    	header('Location: '.'../index.php');
+	// TODO do not show this if not logged in
+
  ?>
 
 <?php include("../templates/header.php") ?>

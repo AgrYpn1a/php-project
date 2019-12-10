@@ -1,27 +1,7 @@
 <?php 
 
-include('../src/project.php');
-include('../src/db_utils.php');
-
-session_start();
-
-if(!isset($_SESSION['name']))
- header('Location: '.'../index.php');
-
-DBUtils::init();
-
-if(isset($_POST['create_project'])) {
-  $owner = $_SESSION['name'];
-  $name = $_POST['project_name'];
-  $desc = $_POST['project_desc'];
-
-  if(DBUtils::add_project($name, $owner, $desc)) {
-    // redirect
-    header('Location: '.'projects.php');
-  } else {
-    echo "An error has occured while trying to add new project.";
-  }
-}
+  // TODO Miljan
+  // Add project
 
 ?>
 

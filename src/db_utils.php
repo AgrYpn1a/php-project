@@ -25,7 +25,7 @@
 		}
 
 		public static function login($username, $password) {
-		 	// TODO Miljan
+		 	// TODO Vladimir
 		}
 
 		public static function add_project($name, $owner, $description) {
